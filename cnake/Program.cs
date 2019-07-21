@@ -21,6 +21,10 @@ namespace cnake
             p2.sym = '#';*/
             p2.Draw();
 
+            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');//в аргументе задаем парамент точки
+            line.Drow();
+                 
+
             /*int x1 = 1;
             int y1 = 3;
             char sym1 = '*';
@@ -29,7 +33,9 @@ namespace cnake
             int y2 = 5;
             char sym2 = '#';
             Draw(x2, y2, sym2);*/
-            List<int> numList = new List<int>();
+
+            //как работает класс стандарстной бибилиотеки List
+            /*List<int> numList = new List<int>();
             numList.Add(0);
             numList.Add(1);
             numList.Add(2);
@@ -46,7 +52,7 @@ namespace cnake
 
             List<Point> pList = new List<Point>();
             pList.Add(p1);
-            pList.Add(p2); 
+            pList.Add(p2);*/ 
 
 
 
