@@ -10,19 +10,33 @@ namespace cnake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
+            //Point p1 = new Point(1, 3, '*');
             /*p1.x = 1;
             p1.y = 3;
             p1.sym = '*';*/
-            p1.Draw();
-            Point p2 = new Point(4, 5, '#');
+            //p1.Draw();
+            //Point p2 = new Point(4, 5, '#');
             /*p2.y = 4;
             p2.x = 5;
             p2.sym = '#';*/
-            p2.Draw();
+            // p2.Draw();
+            Console.SetBufferSize(80, 25);
 
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');//в аргументе задаем парамент точки
-            line.Drow();
+
+
+           //отрисовка рамочки
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');//в аргументе задаем парамент точки
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0,'+');
+            VerticalLine reghtLine = new VerticalLine(0, 24, 78, '+');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            reghtLine.Drow();
+
+            //отрисовка точки
+            Point p = new Point(4, 5, '*');
+            p.Draw();
                  
 
             /*int x1 = 1;

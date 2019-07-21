@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace cnake
 {
-    class HorizontalLine
+    class HorizontalLine : Figure
     {
-        List<Point> pList;
+       
                               //по левой точки x, правой точки x,
         public HorizontalLine(int xLeft, int xReight, int y, char sym)
         {
@@ -31,12 +31,6 @@ namespace cnake
             pList.Add(p2);
             pList.Add(p3);*/
         }
-        public void Drow()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
-            }
-        }
+        
     }
 }
