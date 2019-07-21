@@ -20,7 +20,7 @@ namespace cnake
             p2.x = 5;
             p2.sym = '#';*/
             p2.Draw();
-            
+
             /*int x1 = 1;
             int y1 = 3;
             char sym1 = '*';
@@ -29,6 +29,25 @@ namespace cnake
             int y2 = 5;
             char sym2 = '#';
             Draw(x2, y2, sym2);*/
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
+
+            int x = numList[0];
+            int y = numList[1];
+            int z = numList[2];
+            foreach(int i in numList)
+            {
+                Console.WriteLine(i);
+            }
+
+            numList.RemoveAt(0);
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2); 
+
 
 
             Console.ReadKey();
