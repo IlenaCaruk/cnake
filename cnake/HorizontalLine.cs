@@ -31,7 +31,6 @@ namespace cnake
                 p.Draw();
                 }
                 
-
                 //base.Draw();//базовая реализация метода дров
 
                 Console.ForegroundColor = ConsoleColor.White;//затем меняем на белый

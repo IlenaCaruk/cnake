@@ -20,7 +20,7 @@ namespace cnake
             Snake snake = new Snake(p, 4, Direction.RIGHT);//змейка. змея тоже фигура поэтому вначеде фигура
             snake.Draw();
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
-            Point food = foodCreator.CreateFood();
+            Point food = foodCreator.CreateFood();//является объектом класса точка
             food.Draw();
 
             while (true)
@@ -46,8 +46,6 @@ namespace cnake
                     snake.HandleKey(key.Key);
                 }
 
-
-
                 //Snake snake = (Snake)fSnake;//явное приведение типа. сделано для того чтоб потом можно было применять на змейку ее свойства
 
                 /*HorizontalLine hl = new HorizontalLine(0, 5, 6, '&');
@@ -67,10 +65,6 @@ namespace cnake
                 {
                     figure.Draw();//вызовает для фигуры метод дров
                 }
-
-
-
-
 
                 //Point p1 = new Point(1, 3, '*');
                 /*p1.x = 1;
@@ -153,10 +147,6 @@ namespace cnake
                 List<Point> pList = new List<Point>();
                 pList.Add(p1);
                 pList.Add(p2);*/
-
-
-
-                //Console.ReadKey();
             }
             //скрывает подробности реализации
             /*static void Draw(int x, int y, char sym)//принимает в качестве аргумента входные параметры

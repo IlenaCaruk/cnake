@@ -12,6 +12,5 @@ namespace cnake
         RIGHT,
         UP,
         DOWN
-
     }
 }
