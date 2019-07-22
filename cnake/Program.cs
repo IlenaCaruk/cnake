@@ -39,7 +39,37 @@ namespace cnake
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
-            snake.Move();
+
+            //создан класс ответственен за генерацию точек с едой
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');//передается габариты экрана и символ еды
+            Point food = foodCreator.CreateFood();//это метод который будет создавать еду в произвольных местах на карте
+            food.Draw();
+
+            while (true)
+            {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();//метод который говорит будет змея есть или нет(ложь, правда)
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);//задержка
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();//считывание с консолий нажатий
+                    snake.HandleKey(key.Key);
+                }
+            }
+
+
+
+
+            /*snake.Move();
             //метод мов с задержкой команды
             Thread.Sleep(300);
             snake.Move();

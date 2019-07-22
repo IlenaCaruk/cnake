@@ -41,5 +41,30 @@ namespace cnake
             nextPoint.Move(1, direction);//теперь сдвигает это точку по направлению дирекшен
             return nextPoint;
         }
+        public void HandleKey(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Direction.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.RIGHT;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.DOWN;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.UP;
+        }
+
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();//где находится змейка в данный момент
+            if (head.IsHit(food))//если голова змейки оказывается где еда
+            {
+                //в этом случае она ест
+                food.sym = head.sym;
+                pList.Add(food);//удлинение еды
+                return true;
+            }
+            else//в другом случае не ест
+                return false;
+        }
     }       
 }

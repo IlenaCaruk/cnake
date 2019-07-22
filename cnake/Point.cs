@@ -47,6 +47,11 @@ namespace cnake
             }
 
         }
+        public bool IsHit(Point p)//проверка на равенство координат. есть ли пересечение с едой
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+        
 
         public void Draw()
         {
