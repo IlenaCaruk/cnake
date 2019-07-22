@@ -41,6 +41,16 @@ namespace cnake
             nextPoint.Move(1, direction);//теперь сдвигает это точку по направлению дирекшен
             return nextPoint;
         }
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();//координаты головной точки
+            for (int i = 0; i < pList.Count - 2; i++)//перебираем от точки головы до точки всего тела
+            {
+                if (head.IsHit(pList[i]))//есть ли пересечение этой головы с этой точкой
+                    return true;
+            }
+            return false;
+        }
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)
