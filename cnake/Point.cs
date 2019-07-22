@@ -53,6 +53,12 @@ namespace cnake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+        //метод для хвостовой точки
+       public void Clear()
+        {
+            sym = ' ';//символ у нее становится пустой
+            Draw();//отрисовка точки
+        }
         public override string ToString()
         {
             return x + "," + y + "," + sym;

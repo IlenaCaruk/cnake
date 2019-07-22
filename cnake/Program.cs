@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace cnake
@@ -38,8 +39,26 @@ namespace cnake
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
+            snake.Move();
+            //метод мов с задержкой команды
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+           
 
-                 
+
 
             /*int x1 = 1;
             int y1 = 3;
@@ -68,7 +87,7 @@ namespace cnake
 
             List<Point> pList = new List<Point>();
             pList.Add(p1);
-            pList.Add(p2);*/ 
+            pList.Add(p2);*/
 
 
 
